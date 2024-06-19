@@ -3,12 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bookmark Pages </title>
-    <meta name="description" content="a page that is most usable in ronit life some sites to perform regular task and learn ad revise the daily tasks ">
-
+    <title>Day Tracker</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
-    
+    <div class="container">
+        <div class="sidebar">
+            <h2>Bookmarks</h2>
+            <ul id="bookmarks">
+                <li><a href="bookmark1.html" target="_blank">Bookmark 1</a></li>
+                <li><a href="bookmark2.html" target="_blank">Bookmark 2</a></li>
+                <li><a href="bookmark3.html" target="_blank">Bookmark 3</a></li>
+            </ul>
+            <button id="prev-day">Previous Day</button>
+            <button id="view-history">View History</button>
+        </div>
+        <div class="content">
+            <div class="header">
+                <h1>Day Tracker</h1>
+                <p id="current-date"></p>
+            </div>
+            <div class="day-data">
+                <h2 id="day-title">Day Data</h2>
+                <div id="notes">
+                    <h3>Notes</h3>
+                    <textarea id="note-input" rows="5"></textarea>
+                </div>
+                <div id="hours">
+                    <h3>Hours Used</h3>
+                    <input type="number" id="hours-input" min="0" step="1">
+                </div>
+                <button id="save-button">Save</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="history-panel" id="history-panel">
+        <h2>History</h2>
+        <ul id="history-list"></ul>
+        <button id="close-history">Close</button>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
